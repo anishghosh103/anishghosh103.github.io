@@ -11,10 +11,6 @@ body {
 	background: hsl(120, 83%, 84%);
 }
 
-.navbar-wrapper {
-	display: block;
-}
-
 .navbar {
 	display: flex;
 	position: fixed;
@@ -67,6 +63,7 @@ ul {
 	font-weight: 500;
 	cursor: pointer;
 	outline: none;
+	z-index: 99;
 }
 
 #btn-menu:hover {
@@ -76,6 +73,10 @@ ul {
 #btn-menu:active {
 	background: hsl(0, 0%, 80%);
 	border: 1px solid hsl(0, 0%, 80%);
+}
+
+#cb-menu {
+	display: none;
 }
 
 .container {
@@ -227,7 +228,7 @@ ul {
 
 @media all and (max-width: 768px) {
 	html {
-		font-size: 12px;
+		font-size: 14px;
 	}
 	.container {
 		padding: 10vh 10vw;
@@ -254,11 +255,17 @@ ul {
 }
 
 @media all and (max-width: 600px) {
+	#btn-menu {
+		display: block;
+	}
+	#cb-menu:checked ~ .navbar {
+		display: flex;
+	}
 	.navbar {
+		display: none;
 		width: 100vw;
 		height: 100vh;
 		background: hsl(0, 0%, 100%);
-		display: none;
 	}
 	.navbar ul li {
 		display: block;
