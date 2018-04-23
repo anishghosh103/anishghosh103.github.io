@@ -9,10 +9,10 @@
 </head>
 <body>
 	
-	<label for="cb-menu"><a id="btn-menu">Menu</a></label>
-	<input type="checkbox" id="cb-menu">
+	<label for="cb-menu"><a id="nav-toggler">Menu</a></label>
+	<input type="checkbox" id="cb-menu" style="display:none;">
 	<div class="navbar">
-		<ul>
+		<ul class="inline-list horizontal-space-between-children plain-anchor-children">
 			<li class="nav-item"><a href="#home">Home</a></li>
 			<li class="nav-item"><a href="#about">About</a></li>
 			<li class="nav-item"><a href="#interests">Interests</a></li>
@@ -22,46 +22,67 @@
 	</div>
 	
 	<div class="container" id="home">
-		<img src="images/my-image.png" alt="Image">
-		<div class="content">Hello, I'm Anish.<br>I'm a Web Developer</div>
+		<div class="image"><img src="images/my-image.png" alt="Image"></div>
+		<div class="heading">Hello, I'm Anish,</div>
+		<div class="subheading">A Full Stack Web Developer.</div>
 	</div>
-	<div class="container" id="about">
-		<div class="heading">About Me</div>
+	<div class="container container-padding" id="about">
+		<div class="section-heading">About Me</div>
 		<div class="content">
-			<p>Hi, This is Anish Ghosh. I have done B. Sc. Computer Science from Scottish Church College, Kolkata. Currently learning MEAN Stack Development from edWisor.com. I love coding and discovering new things. I am good with C++, Java, HTML, CSS, JavaScript. My hobbies are finding interesting content over the internet and learning something new in the process. I am always passionate about learning new technology and improving my technical skills.
-			</p>
+			<p>Hi, My name is Anish Ghosh.<br>I have done B. Sc. Computer Science from Scottish Church College, Kolkata.</p> <p>I am currently learning MEAN Stack Development from edWisor.com.</p> <p>I love coding and discovering new things. I am good with C++, Java, HTML, CSS, JavaScript. My hobbies are finding interesting content over the internet and learning something new in the process.</p><p>I am always passionate about learning new technology and improving my technical skills.</p>
 		</div>
 	</div>
-	<div class="container" id="interests">
-		<div class="heading">Interests</div>
-		<div class="item-list">
-			<div class="item">
-				<div class="image"><img src="images/html-css-logo.png" alt="Web Development"></div>
-				<div class="content">Web Development</div>
+	<div class="container container-padding" id="interests">
+		<div class="section-heading">Interests</div>
+		<div class="row">
+			<div class="image"><img src="images/html-css-logo.png" alt="Web Development"></div>
+			<div class="content">
+				<div class="heading">Web Development</div>
+				<div class="body">
+					Web Development is a very fascinating subject to me. The most useful aspect of Web Development is that if you have an idea of a software, you can easily bring it to life using Web Technologies.<br>The world has really become a better place with the invention of the web.
+				</div>
 			</div>
-			<div class="item">
-				<div class="image"><img src="images/nativescript.png" alt="Mobile App Development"></div>
-				<div class="content">Mobile App Development</div>
+		</div>
+		<div class="row">
+			<div class="content">
+				<div class="heading">Mobile App Development</div>
+				<div class="body">
+					Nowadays, mobile apps are more popular than websites and this is because of the rapid growth of mobiles in the market.<br>I am very much interested in learning to develop mobile apps.
+				</div>
+			</div>
+			<div class="image"><img src="images/nativescript.png" alt="Mobile App Development"></div>
+		</div>
+		<div class="row">
+			<div class="image"><img src="images/ai.png" alt="Artificial Intelligence"></div>
+			<div class="content">
+				<div class="heading">Artificial Intelligence</div>
+				<div class="body">
+					I don't think there is a single programmer out there who does not love AI. I would love to learn some of the fields of AI one day, especially Machine Learning and Natural Language Processing.
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container" id="projects">
-		<div class="heading">Projects</div>
-		<div class="item-list">
+	<div class="container container-padding" id="projects">
+		<div class="section-heading">Projects</div>
+		<div class="row plain-anchor-children">
 			<div class="item">
-				<div class="image"><a href="http://anishghosh103.github.io"><img src="http://via.placeholder.com/400x400" alt="Portfolio Site"></a></div>
-				<div class="content"><a href="http://anishghosh103.github.io">My Portfolio Site</a></div>
+				<a href="http://anishghosh103.github.io">
+					<div class="image"><img src="images/works/portfolio.png" alt="Portfolio Site"></div>
+					<div class="text-center">My Portfolio Site</div>
+				</a>
 			</div>
 		</div>
 	</div>
-	<div class="container" id="contact">
-		<div class="heading">Contact</div>
-		<div class="item-list">
+	<div class="container container-padding" id="contact">
+		<div class="section-heading">Contact</div>
+		<div class="row">
 			<div class="item">
+				<img src="images/email.png">
 				<div class="heading">Email</div>
 				<div class="content">anishghosh103@gmail.com</div>
 			</div>
 			<div class="item">
+				<img src="images/phone.png">
 				<div class="heading">Phone</div>
 				<div class="content">9123049002</div>
 			</div>
@@ -69,6 +90,7 @@
 		<ul class="social">
 			<li><a href="https://www.facebook.com/anishghosh103"><img src="images/fa.png" alt="Facebook"></a></li>
 			<li><a href="https://www.linkedin.com/in/anish-ghosh-ab7952156/"><img src="images/linkedin.png" alt="LinkedIn"></a></li>
+			<li><a href="https://www.github.com/anishghosh103/"><img src="images/github.png" alt="Github"></a></li>
 		</ul>
 	</div>
 	<script src="script.js"></script>
