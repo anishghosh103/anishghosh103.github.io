@@ -295,6 +295,14 @@ ul {
 
 /* Media Queries */
 
+@media all and (max-width: 900px) {
+
+	/* Interest Section */
+	#interests .row { margin-bottom: 50px; }
+	#interests .row:last-child { margin: 0; }
+
+}
+
 @media all and (max-width: 768px) {
 
 	.row { flex-flow: column nowrap; }
@@ -330,8 +338,6 @@ ul {
 		width: 50vw;
 		align-self: center;
 	}
-	#interests .row { margin-bottom: 50px; }
-	#interests .row:last-child { margin: 0; }
 
 	/* Project Section */
 	#projects .row {
