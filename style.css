@@ -236,20 +236,16 @@ ul {
 	height: 200px;
 	margin-bottom: 10px;
 	position: relative;
+	overflow: hidden;
+	text-align: center;
+	background: hsla(0, 0%, 100%, 0.3);
+	border: 1px solid hsla(0, 0%, 100%, 0.5);
+	transition: all .1s ease-in-out;
 }
 
-#projects .image:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,0.3);
-}
-
-#projects .item:hover .image:after {
-	background: none;
+#projects .image:hover {
+	background: white;
+	border-color: transparent;
 }
 
 #projects .item:hover {
@@ -257,7 +253,7 @@ ul {
 }
 
 #projects img {
-	width: 100%;
+	height: 100%;
 }
 
 /* Contact Section */
