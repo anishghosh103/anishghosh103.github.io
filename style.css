@@ -60,7 +60,7 @@ ul {
 	position: relative;
 	align-self: center;
 	font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 1.25em;
+	font-size: 1.25rem;
 	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 30px;
@@ -195,7 +195,7 @@ ul {
 	background: hsl(240, 70%, 70%);
 	min-height: 80vh;
 	color: white;
-	font-size: 1.25em;
+	font-size: 1.25rem;
 }
 
 #interests img {
@@ -253,7 +253,7 @@ ul {
 }
 
 #projects img {
-	height: 100%;
+	width: 100%;
 }
 
 /* Contact Section */
