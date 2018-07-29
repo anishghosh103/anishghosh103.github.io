@@ -26,7 +26,7 @@ var projects = [
       'bootstrap'
     ],
     url: 'http://anishghosh103.github.io/IceAndFireApp',
-    imgSrc: 'images/ice-and-fire.png'
+    imgSrc: 'images/ice-and-fire.PNG'
   },
   {
     name: 'Countries Info',
@@ -36,7 +36,7 @@ var projects = [
       'bootstrap'
     ],
     url: 'http://anishghosh103.github.io/CountriesInfoApp',
-    imgSrc: 'images/countries-info.png'
+    imgSrc: 'images/countries-info.PNG'
   },
   {
     name: 'Chat Room',
@@ -50,7 +50,7 @@ var projects = [
       'mean'
     ],
     url: 'http://chat-app.anishghosh.me',
-    imgSrc: 'images/chat-room.png'
+    imgSrc: 'images/chat-room.PNG'
   },
   {
     name: 'Todo List Management',
@@ -65,7 +65,7 @@ var projects = [
       'mean'
     ],
     url: 'http://todo.anishghosh.me',
-    imgSrc: 'images/todo.png'
+    imgSrc: 'images/todo.PNG'
   },
   {
     name: 'Meeting Planner',
