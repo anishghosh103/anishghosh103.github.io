@@ -1,0 +1,158 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.source-sans-pro {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+  margin: 0 0 4rem;
+  position: relative;
+  text-align: center;
+}
+h1:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 30px;
+  height: 3px;
+  background: black;
+  margin-left: -15px;
+  margin-top: 10px;
+}
+
+header {
+  display: none;
+  opacity: 0;
+  transition: all .1s ease-in-out;
+}
+header.show {
+  display: block;
+  opacity: 0.9;
+}
+header.show:hover {
+  opacity: 1;
+}
+.page-link:hover, .page-link.active {
+  opacity: 1;
+}
+
+.home {
+  height: 100vh;
+    background: linear-gradient(135deg, hsl(257, 38%, 14%) 0%, hsl(163, 33%, 28%) 100%);
+    position: relative;
+}
+.home .title span {
+  color: #57f192;
+}
+.home .bx {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1rem;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  animation: arrow-down-anim 1s linear infinite;
+  opacity: 0.25;
+}
+
+.bar {
+  width: 90%;
+  display: flex;
+  margin-bottom: 10px;
+}
+.bar .skill {
+  background: #7decc9;
+  color: #0d503b;
+}
+.bar .percentage .value {
+  background: linear-gradient(90deg, hsl(161, 53%, 45%) 0%, hsl(262, 37%, 73%) 100%);
+  width: 0%;
+  transition: all 0.5s ease-in-out;
+}
+
+.project-container {
+  width: calc((250px * 3) + (10px * 3 * 2));
+}
+.projects .project {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+}
+@media all and (max-width: 976px) {
+  .project-container {
+    width: calc((200px * 3) + (10px * 3 * 2));
+  }
+  .projects .project {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media all and (max-width: 768px) {
+  .project-container {
+    width: calc(((100vw / 3) * 2) + (10px * 2 * 2));
+  }
+  .projects .project {
+    width: calc(100vw / 3);
+    height: calc(100vw / 3);
+  }
+}
+@media all and (max-width: 576px) {
+  .project-container {
+    width: 60vw;
+  }
+  .projects .project {
+    width: 60vw;
+    height: 60vw;
+  }
+}
+
+.projects a.active {
+  color: white;
+  background: rgb(44, 44, 44);
+}
+.projects .project .content {
+  opacity: 0;
+  transition: all .2s ease-in-out;
+}
+.projects .project:hover .content {
+  opacity: 1;
+}
+
+.contact h1:after {
+  background: white;
+}
+.contact a {
+  transition: all .2s ease-in-out;
+}
+.contact a:hover {
+  background: rgb(105, 105, 230);
+}
+
+.project-details {
+  display: none;
+}
+.project-details .overlay {
+  background: hsla(0, 0%, 0%, 0.5)
+}
+.project-details .content {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes arrow-down-anim {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-5px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(5px); }
+  100% { transform: translateY(0px); }
+}

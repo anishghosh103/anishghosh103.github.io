@@ -1,101 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<title>Anish Ghosh</title>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:300,400,600,700" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Anish Ghosh</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto:300,400" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@1.7.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	
-	<label for="cb-menu"><a id="nav-toggler">Menu</a></label>
-	<input type="checkbox" id="cb-menu" style="display:none;">
-	<div class="navbar">
-		<ul class="inline-list plain-anchor-children">
-			<li class="nav-item"><a href="#home">Home</a></li>
-			<li class="nav-item"><a href="#about">About</a></li>
-			<li class="nav-item"><a href="#interests">Interests</a></li>
-			<li class="nav-item"><a href="#projects">Projects</a></li>
-			<li class="nav-item"><a href="#contact">Contact</a></li>
-		</ul>
-	</div>
-	
-	<div class="container" id="home">
-		<div class="image"><img src="images/my-image.png" alt="Image"></div>
-		<div class="heading">Hello, I'm Anish,</div>
-		<div class="subheading">A Full Stack Web Developer.</div>
-	</div>
-	<div class="container container-padding" id="about">
-		<div class="section-heading">About Me</div>
-		<div class="content">
-			<p>Hi, My name is Anish Ghosh.<br>I have done B. Sc. Computer Science from Scottish Church College, Kolkata.</p> <p>I am currently learning MEAN Stack Development from edWisor.com.</p> <p>I love coding and discovering new things. I am good with C++, Java, HTML, CSS, JavaScript. I also like finding interesting content over the internet and learning something new in the process, and reading books.</p><p>I am always passionate about learning new technologies and improving my technical skills.</p>
-		</div>
-	</div>
-	<div class="container container-padding" id="interests">
-		<div class="section-heading">Interests</div>
-		<div class="row">
-			<div class="image"><img src="images/html-css-logo.png" alt="Web Development"></div>
-			<div class="content">
-				<div class="heading">Web Development</div>
-				<div class="body">
-					Web Development is a very fascinating subject to me. The most useful aspect of Web Development is that if you have an idea of a software, you can easily bring it to life using Web Technologies.<br>The world has really become a better place with the invention of the web.
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="content">
-				<div class="heading">Mobile App Development</div>
-				<div class="body">
-					Nowadays, mobile apps are more popular than websites and this is because of the rapid growth of mobiles in the market.<br>I am very much interested in learning to develop mobile apps.
-				</div>
-			</div>
-			<div class="image"><img src="images/nativescript.png" alt="Mobile App Development"></div>
-		</div>
-		<div class="row">
-			<div class="image"><img src="images/ai.png" alt="Artificial Intelligence"></div>
-			<div class="content">
-				<div class="heading">Artificial Intelligence</div>
-				<div class="body">
-					I don't think there is a single computer science enthusiast out there who does not love AI. I would love to learn some of the fields of AI one day, especially Machine Learning and Natural Language Processing.
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container container-padding" id="projects">
-		<div class="section-heading">Projects</div>
-		<div class="row plain-anchor-children">
-			<div class="item">
-				<a href="http://anishghosh103.github.io">
-					<div class="image"><img src="images/works/portfolio.png" alt="Portfolio Site"></div>
-					<div class="text-center">My Portfolio Site</div>
-				</a>
-			</div>
-			<div class="item text-center" style="align-self: center; flex: 1; font-size: 1.5em; font-weight: 300;">
-				More to come...
-			</div>
-		</div>
-	</div>
-	<div class="container container-padding" id="contact">
-		<div class="section-heading">Contact</div>
-		<div class="row">
-			<div class="item">
-				<img src="images/email.png">
-				<div class="heading">Email</div>
-				<div class="content">anishghosh103@gmail.com</div>
-			</div>
-			<div class="item">
-				<img src="images/phone.png">
-				<div class="heading">Phone</div>
-				<div class="content">9123049002</div>
-			</div>
-		</div>
-		<ul class="social">
-			<li><a href="https://www.facebook.com/anishghosh103"><img src="images/fa.png" alt="Facebook"></a></li>
-			<li><a href="https://www.linkedin.com/in/anish-ghosh-ab7952156/"><img src="images/linkedin.png" alt="LinkedIn"></a></li>
-			<li><a href="https://www.github.com/anishghosh103/"><img src="images/github.png" alt="Github"></a></li>
-		</ul>
-	</div>
-	<script src="script.js"></script>
+  <header class="fixed z-10 m-1 select-none">
+    <span class="md:hidden">
+        <i class="bx bx-menu text-2xl bg-black text-white p-1 rounded mb-1 cursor-pointer" onclick="toggleNav()"></i>
+    </span>
+    <div class="nav text-white bg-black rounded py-3 px-3 md:px-6 hidden md:flex flex-col md:flex-row">
+      <div class="page-link active cursor-pointer opacity-75 uppercase font-bold text-sm tracking-wide mb-2 md:mb-0 md:mr-6" data-dest="home">Home</div>
+      <div class="page-link active cursor-pointer opacity-75 uppercase font-bold text-sm tracking-wide mb-2 md:mb-0 md:mr-6" data-dest="about">About</div>
+      <div class="page-link active cursor-pointer opacity-75 uppercase font-bold text-sm tracking-wide mb-2 md:mb-0 md:mr-6" data-dest="projects">Projects</div>
+      <div class="page-link active cursor-pointer opacity-75 uppercase font-bold text-sm tracking-wide" data-dest="contact">Contact</div>
+    </div>
+  </header>
+  <div class="home w-100 p-8 flex justify-center items-center overflow-hidden">
+    <div id="particles-js" class="absolute pin-t pin-l w-full h-full"></div>
+    <div class="title text-center text-white source-sans-pro text-2xl sm:text-3xl md:text-4xl">
+      <div class="mb-1">
+        Hello, I'm <span>Anish Ghosh</span>.
+      </div>
+      <div>
+        I'm a full-stack web developer.
+      </div>
+    </div>
+    <i class="bx bx-chevron-down" onclick="scrollToAbout()"></i>
+  </div>
+  <div class="about p-8">
+    <h1>about</h1>
+    <div class="flex flex-col md:flex-row items-center w-4/5 mx-auto mb-4">
+      <div class="flex flex-col items-center text-center w-full md:w-1/2 mb-12 md:mb-0">
+        <img class="rounded-full w-1/2 sm:w-1/3 md:w-1/4" src="images/pic.png" alt="Anish Ghosh | Web Developer">
+        <div class="text-3xl text-grey-darkest font-bold my-3 source-sans-pro">
+          who am i?
+        </div>
+        <div class="text-lg font-light w-full sm:w-4/5">
+          I love web development and have a very strong passion for programming. I have done MEAN Stack Development course from edWisor.com.
+        </div>
+      </div>
+      <div id="skills" class="flex flex-col items-center text-center w-full md:w-1/2">
+        <div class="bar" data-value="90" data-skill="HTML"></div>
+        <div class="bar" data-value="85" data-skill="CSS"></div>
+        <div class="bar" data-value="80" data-skill="JavaScript"></div>
+        <div class="bar" data-value="70" data-skill="Angular"></div>
+        <div class="bar" data-value="60" data-skill="Node.js"></div>
+        <div class="bar" data-value="55" data-skill="MongoDB"></div>
+        <div class="bar" data-value="70" data-skill="Git"></div>
+        <div class="bar" data-value="65" data-skill="Github"></div>
+        <div class="bar" data-value="65" data-skill="UI Design"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="projects py-8 px-2 sm:px-8 bg-grey-lighter">
+    <h1>projects</h1>
+    <div class="w-100 mb-8">
+      <div id="filters" class="mx-auto flex flex-col sm:flex-row justify-center mb-3">
+        <div class="flex mb-2 sm:mb-0 justify-center">
+          <a href="#" class="text-sm lg:text-base text-grey-darker hover:text-grey-darkest tracking-wide no-underline py-2 px-4 inline-block uppercase font-bold active" data-filter="*">All</a>
+          <a href="#" class="text-sm lg:text-base text-grey-darker hover:text-grey-darkest tracking-wide no-underline py-2 px-4 inline-block uppercase font-bold" data-filter="angular">Angular</a>
+          <a href="#" class="text-sm lg:text-base text-grey-darker hover:text-grey-darkest tracking-wide no-underline py-2 px-4 inline-block uppercase font-bold" data-filter="bootstrap">Bootstrap</a>
+        </div>
+        <div class="flex justify-center">
+          <a href="#" class="text-sm lg:text-base text-grey-darker hover:text-grey-darkest tracking-wide no-underline py-2 px-4 inline-block uppercase font-bold" data-filter="jquery">jQuery</a>
+          <a href="#" class="text-sm lg:text-base text-grey-darker hover:text-grey-darkest tracking-wide no-underline py-2 px-4 inline-block uppercase font-bold" data-filter="mean">MEAN</a>
+          <a href="#" class="text-sm lg:text-base text-grey-darker hover:text-grey-darkest tracking-wide no-underline py-2 px-4 inline-block uppercase font-bold" data-filter="sass">Sass</a>
+        </div>
+      </div>
+      
+      <div id="grid" class="project-container mx-auto">
+        <!-- <div class="project w-1/4 m-2 relative cursor-pointer" data-groups='["Bootstrap", "jQuery"]'>
+          <figure class="w-full h-full">
+            <img class="w-full h-full" src="images/whatsapp.png" alt="Whatsapp Frontend Clone">
+          </figure>
+          <div class="content absolute pin-t pin-l w-full h-full p-12 bg-black text-white flex justify-center items-center">
+            <span class="source-sans-pro font-bold text-xl text-center">
+              Whatsapp Frontend Clone
+            </span>
+          </div>
+        </div> -->
+     </div>
+    </div>
+  </div>
+
+  <div class="contact p-8 bg-black text-white">
+    <h1>contact</h1>
+    <div class="text-center text-lg sm:text-xl md:text-2xl sm:font-light text-grey my-32">
+      <div class="mb-3">
+        anishghosh103@gmail.com
+      </div>
+      <div>
+        +91-9123049002
+      </div>
+    </div>
+    <div class="text-2xl mt-12 flex justify-center">
+      <a target="_blank" href="https://www.linkedin.com/in/anish-ghosh-ab7952156/" class="text-white no-underline w-12 h-12 bg-grey-darkest flex justify-center items-center mr-3">
+        <i class="bx bxl-linkedin"></i>
+      </a>
+      <a target="_blank" href="https://github.com/anishghosh103" class="text-white no-underline w-12 h-12 bg-grey-darkest flex justify-center items-center mr-3">
+        <i class="bx bxl-github"></i>
+      </a>
+      <a target="_blank" href="https://www.facebook.com/anishghosh103" class="text-white no-underline w-12 h-12 bg-grey-darkest flex justify-center items-center">
+        <i class="bx bxl-facebook"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="project-details fixed z-50 pin-t pin-l w-full h-full">
+    <div class="overlay absolute pin-t pin-l w-full h-full" onclick="hideProjectDetails()"></div>
+    <div class="content flex flex-col absolute w-full sm:w-4/5 md:w-3/5 h-full bg-white">
+      <figure class="w-full flex-1 bg-black bg-no-repeat bg-center bg-cover relative shadow-inner">
+        <a href="#" target="_blank" class="py-3 px-5 no-underline text-white bg-purple inline-block absolute pin-r pin-b m-4 rounded hover:bg-purple-dark uppercase tracking-wide text-xs">Visit Website</a>
+      </figure>
+      <div class="w-full h-64 py-6 px-8">
+        <div class="heading mb-4">
+          <div class="title text-xl text-black font-bold mb-1"></div>
+          <div class="subtitle text-grey-darker"></div>
+        </div>
+        <div class="description text-black"></div>
+        <i class="bx bx-x absolute pin-r pin-b m-8 text-2xl text-red cursor-pointer" onclick="hideProjectDetails()"></i>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/particles-json.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
